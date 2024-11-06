@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+  if (
+    !window.localStorage.getItem("email") &&
+    !window.localStorage.getItem("pass")
+  ) {
+    window.location.href = "signin.html";
+  }
+
   const cartContents = document.getElementById("cart-contents");
   const emptyCartMessage = document.getElementById("empty-cart-message");
   const totalPriceElement = document.getElementById("total-price");
