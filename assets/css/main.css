@@ -221,6 +221,11 @@ h6 {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
+
+.navmenu .cart-content {
+  display: ruby;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -254,6 +259,13 @@ h6 {
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
+  }
+
+  .navmenu .cart-content {
+    display: ruby;
+  }
+  .navmenu a .bi-cart4 {
+    font-size: 16px !important;
   }
 
   .navmenu a i,
@@ -1092,10 +1104,44 @@ section,
 /*--------------------------------------------------------------
 # Courses Section
 --------------------------------------------------------------*/
+
+.courses-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
 .courses .course-item {
   background-color: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   border-radius: 5px;
+}
+
+.courses .course-item .wrapper-img-course {
+  position: relative;
+}
+
+.courses .course-item .wrapper-img-course img {
+  width: 100%;
+  height: auto;
+}
+
+.courses .course-item .wrapper-img-course button {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-size: 14px;
+  padding: 6px 14px;
+  margin: 0;
+  border-radius: 30px;
+  border: none;
+}
+
+.courses .course-item .wrapper-img-course button:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
 .courses .course-content {
